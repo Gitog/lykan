@@ -11,7 +11,7 @@
     gap:10px;
 }
 .signHeader{
-    color: rgb(13, 13, 13);
+    color: #3093c7;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     letter-spacing: 0.09em;
@@ -22,7 +22,7 @@ input{
     font-size: 15px;
     margin: 8px 0;
     box-sizing: border-box;
-    border-color: rgb(162, 229, 27);
+    border-color: #3093c7;
 }
 
 button{
@@ -58,11 +58,11 @@ P{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .singleLink{
-    color: rgb(49, 49, 228);
+    color: #08a4ec;
 }
 
 .singleLink:hover{
-    color: #2008bc;
+    color: rgb(49, 49, 228);
     font-size: 21px;
     cursor: pointer;
 }
