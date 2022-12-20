@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
 import './sign.css'
+import { useNavigate } from 'react-router-dom';
 
 export default function Signin() {
+  const navigate= useNavigate()
+  
   const [email, setEmail]=useState()
   const [password, setPassword]=useState()
 
@@ -14,7 +17,7 @@ export default function Signin() {
 
   function handleSubmit(e){
      e.preventDefault()
-     fetch('http://localhost:5000',{
+     fetch('http://localhost:4000',{
       method: "POST",
       headers: {
         "content-Type":"application/json"
@@ -33,7 +36,7 @@ export default function Signin() {
         </form>
         <div className='links'>
           <p>No Account?</p>
-          <p className='singleLink'>Sign Up</p>
+          <p className='singleLink'  onClick={()=>{ navigate("/signup")}}>Sign Up</p>
       </div>
     </div>
   )

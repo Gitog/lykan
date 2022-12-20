@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import './sign.css'
+import { useNavigate } from 'react-router-dom';
 
 
 function Signup() {
+  const navigate= useNavigate()
   const [name, setName]=useState()
   const [email, setEmail]=useState()
   const [address, setAddress]=useState()
@@ -42,7 +44,7 @@ function Signup() {
       </form>
       <div className='links'>
         <p>Already have an account?</p>
-        <p  className='singleLink'>Sign In</p>
+        <p  className='singleLink' onClick={()=>{ navigate("/signin")}}>Sign In</p>
       </div>
 </div>
   )
