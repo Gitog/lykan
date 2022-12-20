@@ -1,0 +1,67 @@
+.sign{
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.signinForm{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap:10px;
+}
+.signHeader{
+    color: rgb(13, 13, 13);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    letter-spacing: 0.09em;
+}
+
+input{
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-color: rgb(162, 229, 27);
+}
+
+button{
+    font-size: 20px;
+    padding: 8px;
+    background-color: #3093c7;
+    color: #ffffff;
+    border: 1px solid #25729a;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 1px solid #1c5675;
+    background-color: #26759e;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, #26759e),
+      color-stop(100%, #133d5b)
+    );
+}
+
+.links{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap:20px;
+}
+
+P{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.singleLink{
+    color: rgb(49, 49, 228);
+}
+
+.singleLink:hover{
+    color: #2008bc;
+    font-size: 21px;
+    cursor: pointer;
+}
