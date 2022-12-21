@@ -1,0 +1,13 @@
+.maindiv{
+    margin:0 auto;
+    width: 600px
+}
+
+.addproduct{
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    height:100px
+}

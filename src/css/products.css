@@ -1,0 +1,15 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    margin-top: 50px auto;
+}
+
+.imageclass{
+   margin-top: 20px;
+}
+.imageclass img{
+    width: 210px;
+    height: 190px;
+}
