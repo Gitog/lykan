@@ -9,7 +9,9 @@ function AdminLayout() {
       <nav className='navlinks'>
         <NavLink to='displayproducts'>All Products</NavLink>
         <NavLink to='newproduct'>New Product</NavLink>
+        <NavLink to='orders'>Orders</NavLink>
         <NavLink to='clients'>Clients</NavLink>
+        <NavLink to='/'>Logout</NavLink>
       </nav>
       </div>
       <Outlet/>

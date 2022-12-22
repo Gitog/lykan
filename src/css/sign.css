@@ -10,7 +10,7 @@
     justify-content: center;
     gap:10px;
 }
-.signHeader{
+.page-header{
     color: #3093c7;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
@@ -21,7 +21,7 @@ input{
     padding: 12px 20px;
     font-size: 15px;
     margin: 8px 0;
-    box-sizing: border-box;
+    border-style: ridge;
     border-color: #3093c7;
 }
 
