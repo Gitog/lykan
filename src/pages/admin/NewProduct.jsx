@@ -2,6 +2,10 @@ import React from 'react'
 import '../../css/admin/pages.css'
 
 function NewProduct() {
+  const Product={
+
+  }
+  
   return (
     <div className='maindiv'>
       <form className='newproduct'>

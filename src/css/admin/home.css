@@ -1,11 +1,12 @@
 .admin{
     display:flex;
     flex-direction: column;
+    background-color: rgb(28, 66, 94);
 }
 
 .welcome{
     text-align: center;
-     color: #3093c7;
+     color: #fff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 

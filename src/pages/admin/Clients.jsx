@@ -2,7 +2,7 @@ import React from 'react'
 
 function Clients() {
   return (
-    <div className='maindiv'>
+    <div className='clientdiv'>
         <table className='client-table'>
           <tr>
            <th>Name</th>

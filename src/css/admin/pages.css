@@ -1,6 +1,7 @@
 .maindiv{
-    margin:0 auto;
-    width: 80%
+    width: 90%;
+    margin-left:137px;
+    background-color: #fff;
 }
 
 .newproduct{
@@ -13,7 +14,8 @@
 .sizes{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: start;
+  gap: 15px;
   font-size: 18px;
 }
 
@@ -28,16 +30,13 @@ img{
 }
 
 textarea{
-    height:100px;
+    height:90px;
 }
 
 table{
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 3px solid rgb(10, 190, 172);
-    position: fixed;
-    margin-right: 10px;
-}
+    position: relative;
+    margin-left: 18px;
+  }
 
 thead th:nth-child(1) {
     width: 30%;
@@ -84,4 +83,6 @@ tbody td {
 .client-table{
     margin: 0 auto;
     position: relative;
+    border: 3px solid rgb(10, 190, 172);
+    background-color: #fff;
 }
