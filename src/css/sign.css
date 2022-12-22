@@ -18,11 +18,9 @@
 }
 
 input{
-    padding: 12px 20px;
+    padding: 10px 15px;
     font-size: 15px;
     margin: 8px 0;
-    border-style: ridge;
-    border-color: #3093c7;
 }
 
 button{
