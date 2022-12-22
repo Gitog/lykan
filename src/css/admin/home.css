@@ -5,6 +5,8 @@
 
 .welcome{
     text-align: center;
+     color: #3093c7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .adminlayout{
@@ -22,6 +24,20 @@
     display: flex;
     flex-direction: column;
     gap:10px;
-    text-decoration: none;
     padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navlinks a{
+    text-decoration: none;
+    padding: 7px;
+}
+
+.navlinks a:hover{
+    color:rgb(68, 6, 240);
+}
+
+.navlinks a.active{
+    color:#fff
 }

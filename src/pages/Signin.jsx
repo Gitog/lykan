@@ -33,8 +33,8 @@ export default function Signin() {
 
   return (
     <div className='sign'>
+      <h1 className='page-header'><RiAccountCircleFill/>Login</h1>
         <form className='signinForm' onSubmit={handleSubmit}>
-            <h1 className='signHeader'><RiAccountCircleFill/>Login</h1>
             <input type='text' placeholder='Email' required onChange={e => setEmail(e.target.value)}/>
             <input type='password' placeholder='Password' required onChange={e => setPassword(e.target.value)} disabled={isLoading}/>
             <button type='submit'>{isLoading ? "Loading...": "Sign In"}<BiLogInCircle /></button>

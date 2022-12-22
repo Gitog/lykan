@@ -1,13 +1,87 @@
 .maindiv{
     margin:0 auto;
-    width: 600px
+    width: 80%
 }
 
-.addproduct{
+.newproduct{
     display: flex;
     flex-direction: column;
+    width: 600px;
+    margin:0 auto;
+}
+
+.sizes{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.category{
+  padding: 8px;
+  font-weight: bold;
+}
+
+img{
+    width:70px;
+    height:70px;
 }
 
 textarea{
-    height:100px
+    height:100px;
+}
+
+table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 3px solid rgb(10, 190, 172);
+    position: fixed;
+    margin-right: 10px;
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+  }
+
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 10%;
+  }
+
+  thead th:nth-child(4) {
+    width: 10%;
+  }
+
+  th,
+td {
+  padding: 20px;
+}
+
+thead th{
+  font-family: "Rock Salt", cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+
+.client-table{
+    margin: 0 auto;
+    position: relative;
 }

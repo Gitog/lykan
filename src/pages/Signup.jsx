@@ -39,7 +39,7 @@ function Signup() {
 
   return (
     <div className="sign">
-      <h1 className='signHeader'><RiUserAddFill/> Create Account </h1>  
+      <h1 className='page-header'><RiUserAddFill/> Create Account </h1>  
       <form className='signinForm' onSubmit={handleSubmit}>
         <input type='text' placeholder='Fullname' autoComplete='on' required onChange={e => setName(e.target.value)}/>
         <input type='text' placeholder='Email' autoComplete='on' required onChange={e => setEmail(e.target.value)}/>

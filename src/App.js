@@ -11,15 +11,12 @@ import Products from './pages/Products';
 import NewProduct from './pages/admin/NewProduct';
 import Clients from './pages/admin/Clients';
 import DisplayProducts from './pages/admin/DisplayProducts';
+import Orders from './pages/admin/Orders';
 import NotFound from './pages/NotFound';
 
 //layout
 import RootLayout from './layouts/RootLayout';
 import AdminLayout from './layouts/AdminLayout';
-
-
-
-
 
 
 const router = createBrowserRouter(
@@ -34,6 +31,7 @@ const router = createBrowserRouter(
     <Route path='admin' element={<AdminLayout />}>
        <Route path='displayproducts' element={<DisplayProducts />} />
        <Route path='newproduct' element={<NewProduct />} />
+       <Route path='orders' element={<Orders />} />
        <Route path='clients' element={<Clients/>} />
       </Route>
 
