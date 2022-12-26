@@ -25,7 +25,7 @@ export default function Signin() {
      fetch('http://localhost:4000',{
       method: "POST",
       headers: {
-        "content-Type":"application/json"
+        "Content-Type":"application/json"
       },
       body: JSON.stringify(User)
      }).then(response =>response.json())
