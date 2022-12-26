@@ -1,4 +1,26 @@
 .root-layout{
-    width: 96%;
-    margin-left: 50px;
+    width: 100%;
 }
+
+.root-layout nav{
+    background-color:rgb(28, 66, 94);
+    padding: 5PX;
+}
+
+.root-layout a{
+    color: #fff;
+    text-decoration: none;
+    padding-left: 10px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: inline-block;
+    overflow: hidden;
+}
+.root-layout a img{
+    width: 200px;
+    height: 80px;
+    float: left;
+    padding: 0;
+
+}
+
