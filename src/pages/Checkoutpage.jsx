@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/checkoutpage.css'
 
 class CheckoutPage extends React.Component {
   constructor(props) {
