@@ -27,13 +27,12 @@ const router = createBrowserRouter(
     <Route path='signup' element={<Signup />} />
     <Route path='signin' element={<Signin />} />
     <Route path='products' element={<Products />} />
-    
+    <Route path='checkoutpage' element={<CheckoutPage />} />
   
     <Route path='admin' element={<AdminLayout />}>
        <Route path='displayproducts' element={<DisplayProducts />} />
        <Route path='newproduct' element={<NewProduct />} />
-       <Route path='orders' element={<Orders />} />
-       <Route path='checkoutpage' element={<CheckoutPage />} />
+       <Route path='orders' element={<Orders />} />       
        <Route path='clients' element={<Clients/>} />
       </Route>
 
