@@ -10,6 +10,7 @@ import Signup from './pages/Signup';
 import Products from './pages/Products';
 import NewProduct from './pages/admin/NewProduct';
 import Clients from './pages/admin/Clients';
+import CheckoutPage from './pages/Checkoutpage';
 import DisplayProducts from './pages/admin/DisplayProducts';
 import Orders from './pages/admin/Orders';
 import NotFound from './pages/NotFound';
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
        <Route path='displayproducts' element={<DisplayProducts />} />
        <Route path='newproduct' element={<NewProduct />} />
        <Route path='orders' element={<Orders />} />
+       <Route path='checkoutpage' element={<CheckoutPage />} />
        <Route path='clients' element={<Clients/>} />
       </Route>
 
