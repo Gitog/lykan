@@ -1,15 +1,40 @@
-.card{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    height: 100%;
-    margin-top: 50px auto;
+/* Float for columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
 }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 10px;
+}
+
+.card{
+    box-shadow: 0 1px 7px 0 rgba(28, 26, 26, 0.2);
+    max-width: 300px;
+    margin: auto ;
+    text-align: center;
+    font-family: arial;
+    border-radius: 20px;
+}
+
 
 .imageclass{
    margin-top: 20px;
+   border-radius: 20px;
 }
 .imageclass img{
-    width: 210px;
+    width: 300px;
     height: 190px;
+    border-radius: 20px;
+}
+
+.price {
+  color: black;
+  font-size: 22px;
+  font-style: italic;
 }
