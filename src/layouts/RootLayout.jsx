@@ -11,7 +11,7 @@ export default function RootLayout() {
             <nav>
                 <NavLink to='/' className="logo"><img src='./images/Llogo.png'alt="Logo"/></NavLink>
                 <NavLink to='/'>Home</NavLink>
-                <NavLink to='signin'>Sign In</NavLink>
+                <NavLink to='signin'>Sign in</NavLink>
                 <NavLink to="products">Shop</NavLink>
                 <NavLink to="checkoutpage">Checkout</NavLink>
             </nav>
