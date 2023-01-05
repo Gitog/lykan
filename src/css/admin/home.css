@@ -21,7 +21,8 @@
     transition: 0.5s;
 }
 
-.navlinks{
+.adminlayout nav{
+    background-color: rgb(57, 228, 228);
     display: flex;
     flex-direction: column;
     gap:10px;
@@ -30,15 +31,16 @@
     font-weight: bold;
 }
 
-.navlinks a{
+nav a{
     text-decoration: none;
     padding: 7px;
+    color: #fff;
 }
 
-.navlinks a:hover{
-    color:rgb(68, 6, 240);
+nav a:hover{
+    color:rgb(28, 66, 94);
 }
 
-.navlinks a.active{
-    color:#fff
+nav a.active{
+    color: blue;
 }

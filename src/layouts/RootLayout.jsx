@@ -12,7 +12,7 @@ export default function RootLayout() {
                 <NavLink to='/' className="logo"><img src='./images/Llogo.png'alt="Logo"/></NavLink>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='signin'>Sign In</NavLink>
-                <NavLink to="products">Men's Wear</NavLink>
+                <NavLink to="products">Shop</NavLink>
                 <NavLink to="checkoutpage">Checkout</NavLink>
             </nav>
         </header>}
