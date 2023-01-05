@@ -13,6 +13,7 @@ export default function RootLayout() {
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='signin'>Sign In</NavLink>
                 <NavLink to="products">Shop</NavLink>
+                <NavLink to="checkoutpage">Checkout</NavLink>
             </nav>
         </header>}
        
