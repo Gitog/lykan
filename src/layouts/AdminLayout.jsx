@@ -11,7 +11,7 @@ function AdminLayout() {
     <div className='admin'>
       <h1 className='welcome'>WELCOME TO ADMIN PAGE</h1>
       <div className='adminlayout'>
-      <nav className='navlinks'>
+      <nav>
         <NavLink to='displayproducts'><GiClothes /> All Products</NavLink>
         <NavLink to='newproduct'><VscNewFile/>New Product</NavLink>
         <NavLink to='orders'><AiOutlineUnorderedList />Orders</NavLink>
