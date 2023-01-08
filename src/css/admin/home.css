@@ -2,6 +2,7 @@
     display:flex;
     flex-direction: column;
     background-color: rgb(28, 66, 94);
+    height:100%;
 }
 
 .welcome{
@@ -31,16 +32,16 @@
     font-weight: bold;
 }
 
-nav a{
+.adminlayout nav a{
     text-decoration: none;
     padding: 7px;
     color: #fff;
 }
 
-nav a:hover{
+.adminlayout nav a:hover{
     color:rgb(28, 66, 94);
 }
 
-nav a.active{
+.adminlayout nav a.active{
     color: blue;
 }
