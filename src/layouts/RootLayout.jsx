@@ -10,10 +10,17 @@ export default function RootLayout() {
       {!path.includes('admin') &&  <header>
             <nav>
                 <NavLink to='/' className="logo"><img src='./images/Llogo.png'alt="Logo"/></NavLink>
+                <div className="filterfiled">
+                  <input type="text" id="searchInput" placeholder="Search..."/>
+                </div>
+                <div className='thepages'>
                 <NavLink to='/'>Home</NavLink>
-                <NavLink to='signin'>Sign In</NavLink>
                 <NavLink to="products">Shop</NavLink>
+                <NavLink to='cart'>Cart</NavLink>
+                <NavLink to='signin'>My Account</NavLink>
                 <NavLink to="checkoutpage">Checkout</NavLink>
+                </div>
+               
             </nav>
         </header>}
        
