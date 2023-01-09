@@ -1,3 +1,10 @@
+body{
+    margin:0;
+    padding:0;
+}
+.app{
+    background-color: #fff;
+}
 .root-layout{
     width: 100%;
 }
@@ -5,25 +12,9 @@
 .root-layout nav{
     background-color:rgb(28, 66, 94);
     padding: 5PX;
+    display: flex; 
 }
 
-.root-layout nav a{
-    color: #fff;
-    text-decoration: none;
-    padding-left: 10px;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    display: inline-block;
-    overflow: hidden;
-}
-.root-layout nav a:hover{
-    color: rgb(212, 120, 120);
-}
-
-.root-layout nav a:active{
-    color: rgb(28, 66, 94);
-    background-color: #fff;
-}
 .root-layout nav a img{
     width: 200px;
     height: 80px;
@@ -32,3 +23,71 @@
 
 }
 
+.filterfiled{
+    margin-top: 10px;
+   }
+
+#searchInput{
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd
+}
+
+.thepages{
+    margin-top:30px;
+    margin-left: auto;
+    margin-right: 0;
+}
+.thepages a{
+   text-decoration: none;
+   color: #fff;
+   font-family:'Courier New', Courier, monospace;
+   font-weight: bold;
+   padding: 10px;
+}
+
+.thepages a:hover{
+    color: rgb(219, 192, 192);
+}
+
+.thepages a.active{
+    color: rgb(212, 120, 120);
+}
+
+.slider{
+   position: absolute; 
+}
+
+.main{
+    margin-top: -100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.info p{
+    background-color: #fff;
+}
+
+.info-details{
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
+.im{
+    margin-top: 15px;
+}

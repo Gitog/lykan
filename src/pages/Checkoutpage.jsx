@@ -3,7 +3,7 @@ import '../css/checkoutpage.css';
 
 const CheckoutPage = () => {
   return (
-    <div>
+    <div className="checkout">
       <h1>Checkout</h1> 
       <h2>Billing Details </h2>
       <form>
@@ -35,6 +35,22 @@ const CheckoutPage = () => {
 
       </table> 
       </form>
+        <button type="submit">Submit</button>
+      </form> 
+      <h2> Order Summary</h2> 
+      <div className='order'>
+        <div>Product 1</div>
+        <div>$10</div>
+      </div>
+      <div className='order'>
+        <div>Product 2</div>
+        <div>$20</div>
+      </div>
+      <div className='order'>
+        <div>Total:</div>
+        <div>$30</div>
+      </div>
+      <button type="submit">Place Order</button>
     </div>
   );
 };
