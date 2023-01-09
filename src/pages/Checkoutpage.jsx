@@ -4,6 +4,7 @@ import '../css/checkoutpage.css';
 const CheckoutPage = () => {
   return (
     <div className="checkout">
+      <div className="details">
       <h1>Checkout</h1> 
       <h2>Billing Details </h2>
       <form>
@@ -23,7 +24,9 @@ const CheckoutPage = () => {
         <input type="text" id="telephone" />
         <br />
         <button type="submit">Submit</button>
-      </form> 
+      </form>  
+      </div> 
+      <div className="orders">
       <h2> Order Summary</h2> 
       <div className='order'>
         <div>Product 1</div>
@@ -38,6 +41,7 @@ const CheckoutPage = () => {
         <div>$30</div>
       </div>
       <button type="submit">Place Order</button>
+    </div>
     </div>
   );
 };
