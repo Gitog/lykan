@@ -1,12 +1,28 @@
+.shop{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.sidebar{
+  width: 25%;
+
+}
+
+.row{
+  width: 75%;
+}
+
 /* Float for columns side by side */
 .column {
-  float: left;
+  float: right;
   width: 25%;
   padding: 0 10px;
 }
 
 /* Clear floats after the columns */
-.row:after {
+ .row:after {
   content: "";
   display: table;
   clear: both;
@@ -33,8 +49,16 @@
     border-radius: 20px;
 }
 
+.SideBar{
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+
+}
+
 .price {
   color: black;
   font-size: 22px;
   font-style: italic;
 }
+
