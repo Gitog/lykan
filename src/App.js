@@ -13,11 +13,14 @@ import Clients from './pages/admin/Clients';
 import CheckoutPage from './pages/Checkoutpage';
 import DisplayProducts from './pages/admin/DisplayProducts';
 import Orders from './pages/admin/Orders';
+import Cart from './pages/Cart';
 import NotFound from './pages/NotFound';
 
 //layout
 import RootLayout from './layouts/RootLayout';
 import AdminLayout from './layouts/AdminLayout';
+import Footer from './layouts/Footer'
+
 
 
 const router = createBrowserRouter(
@@ -27,13 +30,13 @@ const router = createBrowserRouter(
     <Route path='signup' element={<Signup />} />
     <Route path='signin' element={<Signin />} />
     <Route path='products' element={<Products />} />
-    
+    <Route path='cart' element={<Cart />} />
+    <Route path='checkoutpage' element={<CheckoutPage />} />
   
     <Route path='admin' element={<AdminLayout />}>
        <Route path='displayproducts' element={<DisplayProducts />} />
        <Route path='newproduct' element={<NewProduct />} />
-       <Route path='orders' element={<Orders />} />
-       <Route path='checkoutpage' element={<CheckoutPage />} />
+       <Route path='orders' element={<Orders />} />       
        <Route path='clients' element={<Clients/>} />
       </Route>
 
@@ -46,7 +49,10 @@ const router = createBrowserRouter(
 
 function App() {
   return (
+    <div className='app'>
    <RouterProvider router={router}/>
+   <Footer />
+  </div>
   );
 }
 

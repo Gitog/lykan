@@ -1,47 +1,55 @@
-.checkout-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .checkout-page h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .checkout-page .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  .checkout-page .form-group label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .checkout-page .form-group input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .checkout-page .form-group .error {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-  
-  .checkout-page button[type="submit"] {
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .checkout-page button[type="submit"]:hover {
-    background-color: #218838;
-  }
-  
+ .checkout h1, h2{
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-weight: lighter;
+} 
+
+
+/* Style the checkout form */
+ .checkout form, .order {
+  max-width: 350px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}  
+
+
+ Style the form input fields 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}  
+
+ Style the submit button 
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}  
+
+Add some hover effects to the submit button 
+ input[type="submit"]:hover {
+  background-color: #45a049;
+} 
+
+ Style the checkout summary section 
+.checkout-summary {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+} 
