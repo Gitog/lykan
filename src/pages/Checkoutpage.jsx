@@ -23,6 +23,17 @@ const CheckoutPage = () => {
         <input type="text" id="telephone" />
         <br />
         <button type="submit">Place Order</button>
+      </form> 
+      <form className='orders'> 
+      <h3>Your Orders</h3>
+      <table> 
+        <tr>
+          <td> PRODUCT</td>
+          <td> SUBTOTAL</td>
+
+        </tr>
+
+      </table> 
       </form>
     </div>
   );
