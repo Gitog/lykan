@@ -1,12 +1,69 @@
+.shop{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.sidebar{
+  width: 15%;
+  margin-left: 10px;
+  
+}
+
+.sidecolumn{
+  border: 1px;
+  border-radius: 15px;
+  background-color: rgb(228, 217, 217);
+  margin-bottom: 5px;
+  padding: 7px;
+}
+
+.sidebar h1{
+ background-color: rgb(229, 223, 223);
+ font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sidecolumn{
+  display: flex;
+  flex-direction: row;
+}
+
+.sideimageclass{
+  width: 50%;
+}
+
+.sidecontent p{
+  background-color: rgb(228, 217, 217);
+}
+
+.row{
+  width: 75%;
+}
+
+.rowdiv{
+  display: flex;
+  flex-direction: row;
+  margin-left: 105px;
+  gap: 500px;
+}
+
+.rowtitle{
+  justify-content: start;
+
+}
+.filterbar{
+  align-content: flex-end;
+  margin-top: 25px;
+}
 /* Float for columns side by side */
 .column {
-  float: left;
-  width: 25%;
+  float: right;
   padding: 0 10px;
 }
 
 /* Clear floats after the columns */
-.row:after {
+ .row:after {
   content: "";
   display: table;
   clear: both;
@@ -16,10 +73,11 @@
 .card{
     box-shadow: 0 1px 7px 0 rgba(28, 26, 26, 0.2);
     max-width: 300px;
-    margin: auto ;
     text-align: center;
     font-family: arial;
     border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
 }
 
 
@@ -27,10 +85,21 @@
    margin-top: 20px;
    border-radius: 20px;
 }
+
+.content p{
+  background-color: white;
+}
 .imageclass img{
     width: 300px;
     height: 190px;
     border-radius: 20px;
+}
+
+.SideBar{
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+
 }
 
 .price {
@@ -38,3 +107,4 @@
   font-size: 22px;
   font-style: italic;
 }
+
