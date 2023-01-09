@@ -57,7 +57,7 @@ export default function Products() {
           <h2>Socks</h2>
           <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
           <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
+          <button>AddtoCart</button>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default function Products() {
           <h2>Socks</h2>
           <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
           <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
+          <button>AddtoCart</button>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ export default function Products() {
           <h2>Socks</h2>
           <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
           <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
+          <button>AddtoCart</button>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function Products() {
           <h2>Socks</h2>
           <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
           <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
+          <button>AddtoCart</button>
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@ export default function Products() {
           <h2>Socks</h2>
           <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
           <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
+          <button>AddtoCart</button>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ export default function Products() {
           <h2>Socks</h2>
           <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
           <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
+          <button>AddtoCart</button>
           </div>
         </div>
       </div>
@@ -141,7 +141,7 @@ export default function Products() {
           <h2>Socks</h2>
           <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
           <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
+          <button>AddtoCart</button>
           </div>
         </div>
       </div>
@@ -155,7 +155,7 @@ export default function Products() {
           <h2>Socks</h2>
           <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
           <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
+          <button>AddtoCart</button>
           </div>
         </div>
       </div>
