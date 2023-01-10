@@ -1,8 +1,9 @@
 /* h1, h2{
   font-size: 25px;
   font-family: 'Courier New', Courier, monospace;
-  text-align: center;
+  text-align:center;
   font-weight: lighter;
+<<<<<<< HEAD
 } */
 
 
@@ -14,6 +15,27 @@
   background-color: #f7f7f7;
   border-radius: 5px;
 }  */
+
+h2 {
+  text-align: left;
+
+}
+
+
+/* Style the checkout form */
+form {
+  max-width: 250px;
+  padding: 20px;
+  background-color: #e2e2e2;
+  border-radius: 10px;
+  text-align: center;
+
+} 
+
+
+.order {
+  text-align: right;
+}
 
 /* Style the form input fields */
 /* input[type="text"],
