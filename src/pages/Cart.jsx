@@ -51,7 +51,7 @@ function ShoppingCartApp() {
   return (
     <div>
       <ShoppingCart items={items} />
-      <ShoppingCartList items={items} addToCart={addItem} />
+      {/* <ShoppingCartList items={items} addToCart={addItem} /> */}
     </div>
   );
 } 
