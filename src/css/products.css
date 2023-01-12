@@ -1,4 +1,57 @@
 /* Float for columns side by side */
+.productspage{
+  width: 100%;
+  margin:20px;
+  display:flex;
+  flex-direction: row; 
+}
+
+.productssidebar{
+  width: 20%;
+  margin-right: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 10px rgb(234, 239, 234);
+}
+.productssidebar h1{
+  background-color: rgb(235, 229, 233);
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.productssidebar .sideimageclass{
+    width: 150px;
+}
+
+.sidecard {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidecontent p{
+  background-color: white;
+}
+.majorshop{
+  width: 70%;
+  padding: 20px;
+  background-color: rgb(235, 229, 233);
+  border-radius: 20px;
+}
+
+.row{
+  padding: 10Px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.rowheader{
+  display: flex;
+  flex-direction: row;
+  gap: 70%;
+}
+
+select{
+  width:150px
+}
 .column {
   float: left;
   width: 25%;
@@ -15,22 +68,46 @@
 
 .card{
     box-shadow: 0 1px 7px 0 rgba(28, 26, 26, 0.2);
-    max-width: 300px;
-    margin: auto ;
+    padding: 10px;
     text-align: center;
     font-family: arial;
     border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 20px;
 }
 
-
-.imageclass{
-   margin-top: 20px;
-   border-radius: 20px;
-}
 .imageclass img{
-    width: 300px;
-    height: 190px;
+    width: 150px;
+    height:100px;
+    margin-top: 10px;
     border-radius: 20px;
+}
+
+.content p{
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: medium;
+}
+
+.content button{
+  font-size: 13px;
+    padding: 8px;
+    background-color: #3093c7;
+    color: #ffffff;
+    border: 1px solid #25729a;
+    cursor: pointer;
+}
+
+.content  button:hover{
+  border: 1px solid #1c5675;
+  background-color: #26759e;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #26759e),
+    color-stop(100%, #133d5b)
+  );
 }
 
 .price {

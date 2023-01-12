@@ -9,6 +9,7 @@
 .majordivs{
     display: flex;
     flex-direction: row;
+    margin-left: 20px;
     justify-content: space-between;
     
 }

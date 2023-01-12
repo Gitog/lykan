@@ -17,13 +17,13 @@
     letter-spacing: 0.09em;
 }
 
-input{
+.signinForm input{
     padding: 10px 15px;
     font-size: 15px;
     margin: 8px 0;
 }
 
-button{
+.signinForm button{
     font-size: 20px;
     padding: 8px;
     background-color: #3093c7;
@@ -32,7 +32,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.signinForm button:hover{
     border: 1px solid #1c5675;
     background-color: #26759e;
     background-image: -webkit-gradient(
@@ -51,9 +51,10 @@ button:hover{
     gap:20px;
 }
 
-P{
+.links P{
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: white;
 }
 .singleLink{
     color: #08a4ec;
