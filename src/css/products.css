@@ -1,3 +1,47 @@
+.shop{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.sidebar{
+  width: 25%;
+  width: 15%;
+  margin-left: 10px;
+  
+}
+
+.sidecolumn{
+  border: 1px;
+  border-radius: 15px;
+  background-color: rgb(228, 217, 217);
+  margin-bottom: 5px;
+  padding: 7px;
+}
+
+.sidebar h1{
+ background-color: rgb(229, 223, 223);
+ font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sidecolumn{
+  display: flex;
+  flex-direction: row;
+}
+
+.sideimageclass{
+  width: 50%;
+}
+
+.sidecontent p{
+  background-color: rgb(228, 217, 217);
+}
+
+.row{
+  width: 75%;
+}
+
 /* Float for columns side by side */
 .productspage{
   width: 100%;
@@ -53,28 +97,51 @@ select{
   width:150px
 }
 .column {
-  float: left;
-  width: 25%;
+  float: right;
+  width: 25%;}
+  
+.rowdiv{
+  display: flex;
+  flex-direction: row;
+  margin-left: 105px;
+  gap: 480px;
+}
+
+.rowtitle{
+  justify-content: start;
+
+}
+.filterbar{
+  align-content: flex-end;
+}
+.filterbar select{
+  font-size: x-large;
+  margin-top: 30px;
+}
+/* Float for columns side by side */
+.column {
+  float: right;
   padding: 0 10px;
 }
 
 /* Clear floats after the columns */
-.row:after {
+ .row:after {
   content: "";
   display: table;
   clear: both;
   padding: 10px;
 }
 
-.card{
+.card {
     box-shadow: 0 1px 7px 0 rgba(28, 26, 26, 0.2);
     padding: 10px;
     text-align: center;
-    font-family: arial;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 20px;
     margin-right: 5px;
     margin-bottom: 20px;
 }
+
 
 .imageclass img{
     width: 150px;
@@ -108,7 +175,7 @@ select{
     color-stop(0%, #26759e),
     color-stop(100%, #133d5b)
   );
-}
+
 
 .price {
   color: black;

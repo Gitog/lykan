@@ -29,7 +29,9 @@
     background-color: #3093c7;
     color: #ffffff;
     border: 1px solid #25729a;
+    border-radius:0 0 15px 15px;
     cursor: pointer;
+    width: 100%;
 }
 
 .signinForm button:hover{
