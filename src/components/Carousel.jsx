@@ -1,10 +1,27 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import './Carousel.css'
 import {images} from './CarouselData'
 
 function Carousel() {
 
   const [index, setIndex] = useState(0)
+
+  // useEffect(() => {
+  //      const lastImage = images.length - 1
+  //      if(index < 0){
+  //       setIndex(lastImage)
+  //      }
+  //      if (index > lastImage){
+  //       setIndex(0)
+  //      }
+  // }, [index]);
+
+  // useEffect(()=> {
+  //   let slider = setInterval(() => {
+  //     setIndex(index + 1)
+  //   }, 5000)
+  //   return () =>clearInterval(slider)
+  // }, [index])
 
   return (
     <div className='carousel'>

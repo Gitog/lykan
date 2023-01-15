@@ -1,6 +1,11 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
     margin:0;
     padding:0;
+    scroll-snap-type: y mandatory;
 }
 .app{
     background-color: #fff;
@@ -23,17 +28,29 @@ body{
 
 }
 
-.filterfiled{
+.filterfield{
+    margin: auto;
     margin-top: 10px;
+    align-content: center;
    }
+
+.filterfield input {
+    caret-color: rgb(218, 20, 20); 
+}
+
 
 #searchInput{
     background-position: 10px 12px;
     background-repeat: no-repeat;
     width: 100%;
     font-size: 16px;
+    font-family: monospace;
+    color:rgb(212, 120, 120);
     padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd
+    border: 2px solid rgb(212, 120, 120);
+}
+#searchInput:focus{
+    outline: 1px solid rgb(233, 17, 17);
 }
 
 .thepages{
@@ -57,6 +74,20 @@ body{
     color: rgb(212, 120, 120);
 }
 
+#cart span:nth-child(1){
+  font-size: 17px;
+}
+
+#cart span:nth-child(2){
+    padding: 0 3px;
+    font-weight: bold;
+    border-radius: 5px;
+    color:#fff;
+    background-color: rgb(212, 120, 120);
+    position: relative;
+    top: -15px;
+}
+
 .slider{
    position: absolute; 
 }
@@ -69,44 +100,43 @@ body{
     border-radius: 12px;
 }
 
-/* .main:after{
-    clear: both;
-} */
+.homeh1{
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.3rem;
+    color: rgb(28, 66, 94);
+    margin-left: 12px;
+}
 
 .trendy{
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 
-.homecolumn{
+.homecolumn {
+    float: left;
+    width: 20%;
+    margin:auto;
+  }
+
+  .homecard{
     width: 100%;
+    box-shadow: 0 1px 7px 0 rgba(28, 26, 26, 0.2);
     padding: 10px;
+    text-align: center;
+    font-family: arial;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
-.homeimageclass{
-    width: 100%;
-}
-
-.homecolumn p{
-    background-color: white;
-}
-
-/* .homecard{
-    gap: 2px;
-} */
-
-.homeimageclass{
-    width: 150px;
-    height:100px;
-}
-
-.homecontent {
-    padding :0;
-}
+  
+.homecard:hover{
+    outline:1px solid rgb(212, 120, 120);
+  }
 
 .branding1{
     width: 100%;
-    height: 30px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -114,8 +144,25 @@ body{
 }
 
 .branding1 h5{
+    font-size: 18px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
+    margin: 10px;
+}
+
+.branding1 img{
+    width: 70%;
+    height:50px;
+}
+
+.branding1 button{
+    width: 100px;
+    font-size: 11px;
+    margin: 5px;
+    background-color: #3093c7;
+    color: #ffffff;
+    border: 1px solid #25729a;
+    cursor: pointer;
 }
 
 .bythecategory{
@@ -153,6 +200,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 20px;
     margin-left: 70px;
     margin-right: 70px;
 }

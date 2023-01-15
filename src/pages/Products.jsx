@@ -61,6 +61,7 @@ export default function Products() {
                         </select>
                     </div>
                  </div>
+                 <div className="productsdiv">
                     <div className='column'>
                         <div className='card'>
                             <div className='imageclass'>
@@ -173,6 +174,7 @@ export default function Products() {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )

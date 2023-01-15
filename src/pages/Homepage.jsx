@@ -1,12 +1,15 @@
 import {useDispatch, useSelector} from "react-redux";
+import {useNavigate} from 'react-router-dom';
 import Carousel from "../components/Carousel";
 import {addToCart} from "../redux/reducers/productSlice";
 import ProductsCard from "../components/productsCard";
+
 export default function Homepage() {
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const state = useSelector(state => state)
     // const cart = useSelector(selectCart) ?? []
-    console.log(state)
+    // console.log(state)
     const addItemToCard = (product) => dispatch(addToCart(product))
     const products = [
         {
@@ -32,32 +35,36 @@ export default function Homepage() {
             img_url: 'https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg',
             name: "socks",
             price: "1200"
-        }, {
-            id: 5,
-            img_url: 'https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg',
-            name: "socks",
-            price: "1200"
         }
     ]
     return (
 
         <div className="home">
-
             <Carousel/>
 
             <div className='main'>
-                <h1>EXPLORE TRENDING PRODUCTS</h1>
+                <h1 className="homeh1">EXPLORE TRENDING PRODUCTS</h1>
                 <div className="trendy">
-                   {products.map((product) => <ProductsCard key={product.id} product={product} addToCart={addItemToCard}/> )}
-                </div>
+                    {
+                    products.map((product) => <ProductsCard key={
+                            product.id
+                        }
+                        product={product}
+                        addToCart={addItemToCard}/>)
+                } </div>
             </div>
             <div className="branding1">
                 <h5>Latest & Fashion & Design</h5>
-                <button type='button'>SHOP
+                <button type='button'
+                    onClick={
+                        () => {
+                            navigate("/products")
+                        }
+                }>SHOP
                 </button>
             </div>
             <div className="bycategory">
-                <h1>SHOP BY CATEGORY</h1>
+                <h1 className="homeh1">SHOP BY CATEGORY</h1>
                 <div className="thecategories">
                     <div className="c1">
                         <img src="https://cdn.pixabay.com/photo/2020/07/11/16/16/jeans-5394561_960_720.jpg" alt="jeans"/>
@@ -75,10 +82,26 @@ export default function Homepage() {
             </div>
 
             <div className="branding1">
-                <h5>Latest & Fashion & Design</h5>
-                <button type='button'>SHOP
+                <h5>Quality & Affordable Wear</h5>
+                <button type='button'
+                    onClick={
+                        () => {
+                            navigate("/cart")
+                        }
+                }>
+                    CART
                 </button>
             </div>
+            <h1 className="homeh1">MORE PRODUCTS</h1>
+            <div className="trendy">
+                {
+                products.map((product) => <ProductsCard key={
+                        product.id
+                    }
+                    product={product}
+                    addToCart={addItemToCard}/>)
+            } </div>
+
             <div className='info'>
 
                 <div className='info-details'>

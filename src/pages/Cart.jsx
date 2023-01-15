@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import Carousel from "../components/Carousel";
+import '../css/cart.css'
 import {addToCart} from "../redux/reducers/productSlice";
 import ProductsCard from "../components/productsCard";
 export default function Cart() {
@@ -11,14 +11,14 @@ export default function Cart() {
     
     return (
 
-        <div className="home">
-            <div className='cart'>
+        <div className="carthome">
+            <div className='cartdiv'>
                 <h1>Your Basket</h1>
-                <div className="trendy">
+                <div className="carttrendy">
                    {cart.map((product) => <ProductsCard key={product.id} product={product} addToCart={addItemToCard}/> )}
                 </div>
+                <button>Proceed to checkout</button>
             </div>
-          
         </div>
     )
 }

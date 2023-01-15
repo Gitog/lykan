@@ -18,8 +18,14 @@
   text-align: center;
 }
 
-.productssidebar .sideimageclass{
-    width: 150px;
+.sidecolumn{
+  border-bottom:1px solid #1c5675;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.sidecolumn:hover{
+   background-color: rgb(235, 222, 222);
 }
 
 .sidecard {
@@ -27,9 +33,14 @@
   flex-direction: row;
 }
 
+.sideimageclass{
+    width: 150px;
+}
+
 .sidecontent p{
   background-color: white;
 }
+
 .majorshop{
   width: 70%;
   padding: 20px;
@@ -38,6 +49,8 @@
 }
 
 .row{
+  display: flex;
+  flex-direction: column;
   padding: 10Px;
   background-color: white;
   border-radius: 20px;
@@ -50,30 +63,36 @@
 }
 
 select{
-  width:150px
+  width:150px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+.productsdiv{
+  display: flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .column {
   float: left;
-  width: 25%;
-  padding: 0 10px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  padding: 10px;
+  width: 29%;
+  margin-right:35px;
 }
 
 .card{
+    width: 100%;
     box-shadow: 0 1px 7px 0 rgba(28, 26, 26, 0.2);
     padding: 10px;
     text-align: center;
     font-family: arial;
     border-radius: 20px;
-    margin-right: 5px;
     margin-bottom: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.card:hover{
+  outline:1px solid rgb(212, 120, 120);
 }
 
 .imageclass img{
