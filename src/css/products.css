@@ -6,43 +6,8 @@
   flex-direction: row; 
 }
 
-.productssidebar{
-  width: 20%;
-  margin-right: 10px;
-  border-radius: 20px;
-  box-shadow: 5px 10px rgb(234, 239, 234);
-}
-.productssidebar h1{
-  background-color: rgb(235, 229, 233);
-  font-family: 'Times New Roman', Times, serif;
-  text-align: center;
-}
-
-.sidecolumn{
-  border-bottom:1px solid #1c5675;
-  margin-bottom: 4px;
-  cursor: pointer;
-}
-
-.sidecolumn:hover{
-   background-color: rgb(235, 222, 222);
-}
-
-.sidecard {
-  display: flex;
-  flex-direction: row;
-}
-
-.sideimageclass{
-    width: 150px;
-}
-
-.sidecontent p{
-  background-color: white;
-}
-
 .majorshop{
-  width: 70%;
+  width: 95%;
   padding: 20px;
   background-color: rgb(235, 229, 233);
   border-radius: 20px;
@@ -68,30 +33,25 @@ select{
   font-size: 16px;
 }
 .productsdiv{
-  display: flexbox;
-  flex-direction: row;
+  width:95%;
+  display: flex;
+  flex-direction:row;
   flex-wrap: wrap;
-  width: 100%;
 }
-.column {
-  float: left;
-  width: 29%;
-  margin-right:35px;
+.productsdiv .homecolumn{
+  width: 30%;
+  padding:10px;
 }
-
-.card{
-    width: 100%;
+.productsdiv .homecard{
     box-shadow: 0 1px 7px 0 rgba(28, 26, 26, 0.2);
-    padding: 10px;
     text-align: center;
     font-family: arial;
     border-radius: 20px;
-    margin-bottom: 20px;
-    margin-left: 15px;
+    margin: auto;
     cursor: pointer;
 }
 
-.card:hover{
+.productsdiv .homecard:hover{
   outline:1px solid rgb(212, 120, 120);
 }
 

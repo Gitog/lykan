@@ -3,40 +3,27 @@ import {useNavigate} from 'react-router-dom';
 import Carousel from "../components/Carousel";
 import {addToCart} from "../redux/reducers/productSlice";
 import ProductsCard from "../components/productsCard";
+import {useState, useEffect} from 'react'
+import axios from 'axios'
 
 export default function Homepage() {
+
+    const [products, setProducts] = useState()
+    let randomProduct = Math.random() * products ?. length - 4
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const state = useSelector(state => state)
     // const cart = useSelector(selectCart) ?? []
     // console.log(state)
     const addItemToCard = (product) => dispatch(addToCart(product))
-    const products = [
-        {
-            id: 1,
-            img_url: 'https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg',
-            name: "socks",
-            price: "1200"
-        },
-        {
-            id: 2,
-            img_url: 'https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg',
-            name: "socks",
-            price: "1200"
-        },
-        {
-            id: 3,
-            img_url: 'https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg',
-            name: "socks",
-            price: "1200"
-        },
-        {
-            id: 4,
-            img_url: 'https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg',
-            name: "socks",
-            price: "1200"
-        }
-    ]
+
+    useEffect(() => {
+        axios({method: 'GET', url: 'http://localhost:3000/products'}).then((res) => {
+            setProducts(res.data)
+        }).catch(err => console.log(err))
+    }, [])
+    // console.log(products)
+
     return (
 
         <div className="home">
@@ -46,7 +33,7 @@ export default function Homepage() {
                 <h1 className="homeh1">EXPLORE TRENDING PRODUCTS</h1>
                 <div className="trendy">
                     {
-                    products.map((product) => <ProductsCard key={
+                    products ?. slice(0, 4).map((product) => <ProductsCard key={
                             product.id
                         }
                         product={product}
@@ -95,7 +82,8 @@ export default function Homepage() {
             <h1 className="homeh1">MORE PRODUCTS</h1>
             <div className="trendy">
                 {
-                products.map((product) => <ProductsCard key={
+
+                products ?. slice(randomProduct, randomProduct + 4).map((product) => <ProductsCard key={
                         product.id
                     }
                     product={product}
