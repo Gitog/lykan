@@ -1,26 +1,52 @@
-body {
-  padding: 20px;
-  margin:0%;
-} 
+.checkout {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 
-h1, h2{
+ } 
+  
+  
+  .checkout h1, h2{
   font-size: 25px;
   font-family: 'Courier New', Courier, monospace;
-  text-align: center;
+  text-align:center;
   font-weight: lighter;
+}
+.checkout h2 {
+  text-align: left;
+
 }
 
 
 /* Style the checkout form */
-form {
+.details form {
+  max-width: 250px;
+  padding: 20px;
+  background-color: #e2e2e2;
+  border-radius: 10px;
+  text-align: center;
+
+} 
+
+.order {
+  text-align: right;
+}
+
+/* Style the form input fields */
+
+
+
+/* Style the checkout form */
+ .checkout form, .order {
   max-width: 350px;
   margin: auto;
   padding: 20px;
   background-color: #f7f7f7;
   border-radius: 5px;
-} 
+}   
 
-/* Style the form input fields */
+
+ /*Style the form input fields */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -33,9 +59,9 @@ textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-} 
+}  
 
-/* Style the submit button */
+ Style the submit button 
 input[type="submit"] {
   background-color: #4caf50;
   color: white;
@@ -43,17 +69,17 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}  
+
+Add some hover effects to the submit button 
+ input[type="submit"]:hover {
+  background-color: #45a049;
 } 
 
-/* Add some hover effects to the submit button */
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-/* Style the checkout summary section */
+ Style the checkout summary section 
 .checkout-summary {
   margin: 20px 0;
   padding: 20px;
   background-color: #e2e2e2;
   border-radius: 5px;
-}
+} 

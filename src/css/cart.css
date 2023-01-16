@@ -1,0 +1,33 @@
+.carthome{
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.cartdiv{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.carttrendy{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.carttrendy .homecard{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* .carttrendy .imageclass{
+   
+} */
+
+.carttrendy .content{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}

@@ -12,7 +12,7 @@ function Clients() {
          <tr>
           <td>James Njorio</td>
           <td>jamesnjorio@gmail.com</td>
-         <td>Kinoo</td>
+         <td>Kiambu</td>
          </tr>
        </table>
     </div>

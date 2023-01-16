@@ -1,0 +1,54 @@
+.carousel {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.carouselInner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.carouselInner .left {
+    flex: 5%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.carouselInner .center {
+    flex: 90%;
+    margin: 0 auto;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+.carouselInner .center h1,
+p {
+    background-color: rgb(212, 120, 120, 0.8);
+    border-radius: 10px;
+}
+
+.carouselInner .center h1 {
+    font-size: 50px;
+}
+
+.carouselInner .center p {
+    width: 30%;
+}
+
+.carouselInner .right {
+    flex: 5%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}

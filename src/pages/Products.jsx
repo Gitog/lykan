@@ -1,125 +1,90 @@
-import React from 'react'
+import {addToCart} from "../redux/reducers/productSlice";
+import ProductsCard from "../components/productsCard";
+import {useState, useEffect} from 'react'
+import axios from 'axios'
 import '../css/products.css'
 
+import { useSelector, useDispatch } from 'react-redux'
+// import { decrement, increment } from './redux/reducers/counterSlice'
+
+
 export default function Products() {
-  return (
-    <div className='row'> 
-      <div className='column'>
-        <div className='card'>
-          <div className='imageclass'>
-            <img src='https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg' alt="Product image"/>
-          </div>
-        <div className='content'>
-          <h2>Socks</h2>
-          <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
-          <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
-          </div>
+
+    const [products, setProducts] = useState([])
+    const [allProducts, setAllProducts] = useState([])
+    const dispatch = useDispatch()
+    const state = useSelector(state => state)
+    // const cart = useSelector(selectCart) ?? []
+    // console.log(state)
+    const addItemToCard = (product) => dispatch(addToCart(product))
+
+    const [selectedFilter, setSelectedFilter] = useState("")
+
+    const categories = {
+        Shoes: 1,
+        Clothes: 2,
+        Accessories: 3
+    }
+
+    const handleSelectChange = (e) => {
+        const { value } = e.target
+        setSelectedFilter(value)
+        let filteredProducts = allProducts.filter(product => {
+            return categories?.[value] === product.category_id
+        })
+        if (value === "All") {
+            filteredProducts = allProducts
+        }
+        setProducts(filteredProducts)
+        // console.log(">>.........", categories?.[value])
+        console.log(e.target.value)
+    }
+
+    useEffect(() => {
+        axios({method: 'GET', url: 'http://localhost:3000/products'}).then((res) => {
+            setProducts(res.data)
+            setAllProducts(res.data)
+        }).catch(err => console.log(err))
+    }, [])
+
+
+    return (
+
+
+        <div className="productspage">
+
+            <div className="majorshop">
+                <div className='row'>
+                 <div className="rowheader">
+                 <div className="majorshoptitle">
+                        <h1>Shop</h1>
+                    </div>
+                    <div className="majorshopselector">
+                        <select
+                          name="categories"
+                          id="categories"
+                          value={selectedFilter}
+                          onChange={handleSelectChange}>
+                            <option value="All">All</option>
+                            <option value="Shoes">Shoes</option>
+                            <option value="Clothes">Clothes</option>
+                            <option value="Accessories">Accessories</option>
+                        </select>
+                    </div>
+                 </div>
+                 <div className="productsdiv">
+
+                    {
+                    products.map((product) => <ProductsCard key={
+                            product.id
+                        }
+                        product={product}
+                        addToCart={addItemToCard}/>)
+                }
+
+                </div>
+            </div>
+            </div>
         </div>
-      </div>
-      
-      <div className='column'>
-        <div className='card'>
-          <div className='imageclass'>
-            <img src='https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg' alt="Product image"/>
-          </div>
-        <div className='content'>
-          <h2>Socks</h2>
-          <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
-          <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div className='column'>
-        <div className='card'>
-          <div className='imageclass'>
-            <img src='https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg' alt="Product image"/>
-          </div>
-        <div className='content'>
-          <h2>Socks</h2>
-          <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
-          <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div className='column'>
-        <div className='card'>
-          <div className='imageclass'>
-            <img src='https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg' alt="Product image"/>
-          </div>
-        <div className='content'>
-          <h2>Socks</h2>
-          <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
-          <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div className='column'>
-        <div className='card'>
-          <div className='imageclass'>
-            <img src='https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg' alt="Product image"/>
-          </div>
-        <div className='content'>
-          <h2>Socks</h2>
-          <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
-          <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div className='column'>
-        <div className='card'>
-          <div className='imageclass'>
-            <img src='https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg' alt="Product image"/>
-          </div>
-        <div className='content'>
-          <h2>Socks</h2>
-          <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
-          <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div className='column'>
-        <div className='card'>
-          <div className='imageclass'>
-            <img src='https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg' alt="Product image"/>
-          </div>
-        <div className='content'>
-          <h2>Socks</h2>
-          <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
-          <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div className='column'>
-        <div className='card'>
-          <div className='imageclass'>
-            <img src='https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg' alt="Product image"/>
-          </div>
-        <div className='content'>
-          <h2>Socks</h2>
-          <p>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</p>
-          <p className="price">Kshs 1,200</p>
-          <button>Add to Cart</button>
-          </div>
-        </div>
-      </div>
-    </div> 
-  )
-
-
-  
-
-  
+    )
 }
