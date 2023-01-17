@@ -1,15 +1,18 @@
 import {NavLink, Outlet, useLocation} from 'react-router-dom'
 import {BsFillCartPlusFill} from 'react-icons/bs'
-import {useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import '../App.css'
+import { searchItem } from '../redux/reducers/productSlice'
 
 
 export default function RootLayout() {
+    const dispatch = useDispatch()
     const location = useLocation()
     const path = location.pathname
-    // console.log(path.includes('admin'))
+
     const cart = useSelector(state => state.products.cart) ?? []
-    // console.log(cart)
+    const product = useSelector(state => state.products.cart) ?? []
+
     return (
         <div className='root-layout'>
             {
@@ -17,7 +20,7 @@ export default function RootLayout() {
                 <nav>
                     <NavLink to='/' className="logo"><img src='./images/Llogo.png' alt="Logo"/></NavLink>
                     <div className="filterfield">
-                        <input type="text" id="searchInput" placeholder="Search..."/>
+                        <input onChange={(e) => dispatch(searchItem(e.target.value))} type="text" id="searchInput" placeholder="Search..."/>
                     </div>
                     <div className='thepages'>
                         <NavLink to='/'>Home</NavLink>
