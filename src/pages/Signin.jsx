@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import '../css/sign.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 import { BiLogInCircle } from 'react-icons/bi';
 import { RiAccountCircleFill } from 'react-icons/ri';
+import {useDispatch} from 'react-redux'
+import signInUser from '../redux/reducers/authSlice'
 
 
 export default function Signin() {
@@ -17,18 +19,20 @@ export default function Signin() {
     password
   }
 
-  console.log(User)
+  // console.log(User)
+  const dispatch = useDispatch()
 
   function handleSubmit(e){
      e.preventDefault()
-     setIsLoading(true)
-     fetch('http://localhost:4000',{
-      method: "POST",
-      headers: {
-        "Content-Type":"application/json"
-      },
-      body: JSON.stringify(User)
-     }).then(response =>response.json())
+    //  setIsLoading(true)
+    //  fetch('http://localhost:4000',{
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type":"application/json"
+    //   },
+    //   body: JSON.stringify(User)
+    //  }).then(response =>response.json())
+    // dispatch(signInUser({email, password}))
   }
 
   return (

@@ -2,7 +2,10 @@ import {useDispatch, useSelector} from "react-redux";
 import '../css/cart.css'
 import {removeFromCart} from "../redux/reducers/productSlice";
 import CartCard from "../components/cartCard";
+import { useNavigate,useLocation } from 'react-router-dom';
+
 export default function Cart() {
+    const navigate= useNavigate()
     const dispatch = useDispatch()
     const cart = useSelector(state => state.products.cart)
     // const cart = useSelector(selectCart) ?? []
@@ -22,7 +25,7 @@ export default function Cart() {
                       removeFromCart={removeItemFromCart}/>
                     ))}
                 </div>
-                <button>Proceed to checkout</button>
+                <button  onClick={()=>{ navigate("/checkoutpage")}}>Proceed to checkout</button>
             </div>
         </div>
     )

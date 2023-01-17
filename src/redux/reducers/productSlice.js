@@ -18,7 +18,7 @@ export const productSlice = createSlice({
     // decrement: (state) => {
     //   state.value -= 1
     // },
-    // incrementByAmount: (state, action) => {
+    // increment: (state, action) => {
     //   state.value += action.payload
     // },
   },

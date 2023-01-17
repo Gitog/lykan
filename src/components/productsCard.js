@@ -6,7 +6,7 @@ function ProductsCard({product, addToCart}) {
         <div className='homecolumn' key={product.id}>
             <div className='homecard'>
                 <div className='imageclass'>
-                    <img src={product.img_url} alt="Product image" />
+                    <img src={product.image} alt="Product image" />
                 </div>
                 <div className='content'>
                     <h2>{product.name}</h2>
