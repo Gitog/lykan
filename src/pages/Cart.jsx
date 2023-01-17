@@ -1,7 +1,9 @@
 import {useDispatch, useSelector} from "react-redux";
 import '../css/cart.css'
-import {removeFromCart} from "../redux/reducers/productSlice";
 import CartCard from "../components/cartCard";
+import {removeFromCart} from "../redux/reducers/productSlice";
+
+
 export default function Cart() {
     const dispatch = useDispatch()
     const cart = useSelector(state => state.products.cart)
@@ -19,7 +21,7 @@ export default function Cart() {
                    <CartCard
                       key={product.id}
                       product={product}
-                      removeFromCart={removeItemFromCart}/>
+                      removeFromCart={removeItemFromCart} />
                     ))}
                 </div>
                 <button>Proceed to checkout</button>
