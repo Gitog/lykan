@@ -1,4 +1,4 @@
-import {addToCart} from "../redux/reducers/productSlice";
+import {addToCart, addToAllProducts, addToProducts, fetchCategories} from "../redux/reducers/productSlice";
 import ProductsCard from "../components/productsCard";
 import {useState, useEffect} from 'react'
 import axios from 'axios'
@@ -10,42 +10,49 @@ import { useSelector, useDispatch } from 'react-redux'
 
 export default function Products() {
 
-    const [products, setProducts] = useState([])
-    const [allProducts, setAllProducts] = useState([])
     const dispatch = useDispatch()
-    const state = useSelector(state => state)
+    const {products, allProducts, categories} = useSelector(state => state.products)
     // const cart = useSelector(selectCart) ?? []
     // console.log(state)
     const addItemToCard = (product) => dispatch(addToCart(product))
 
     const [selectedFilter, setSelectedFilter] = useState("")
 
-    const categories = {
-        Shoes: 1,
-        Clothes: 2,
-        Accessories: 3
-    }
+
+
+    // const categories = {
+    //     Shoes: 22,
+    //     Clothes: 23,
+    //     Accessories: 3
+    // }
 
     const handleSelectChange = (e) => {
         const { value } = e.target
         setSelectedFilter(value)
+        console.log('value', value)
+        // const category = categories.find(category => category.name.toLowerCase() === value.toLowerCase())
         let filteredProducts = allProducts.filter(product => {
-            return categories?.[value] === product.category_id
+            console.log('product', product)
+            return value == product.category_id
         })
         if (value === "All") {
             filteredProducts = allProducts
         }
-        setProducts(filteredProducts)
-        // console.log(">>.........", categories?.[value])
-        console.log(e.target.value)
+        dispatch(addToProducts(filteredProducts))
     }
 
     useEffect(() => {
-        axios({method: 'GET', url: 'http://localhost:3000/products'}).then((res) => {
-            setProducts(res.data)
-            setAllProducts(res.data)
+        axios.get('http://localhost:3000/products').then((res) => {
+            dispatch(addToProducts(res.data))
+            dispatch(addToAllProducts(res.data))
         }).catch(err => console.log(err))
+        dispatch(fetchCategories())
     }, [])
+
+    useEffect(() => {
+        
+    }, [categories])
+    
 
 
     return (
@@ -66,9 +73,7 @@ export default function Products() {
                           value={selectedFilter}
                           onChange={handleSelectChange}>
                             <option value="All">All</option>
-                            <option value="Shoes">Shoes</option>
-                            <option value="Clothes">Clothes</option>
-                            <option value="Accessories">Accessories</option>
+                            {categories.map(category => <option value={category.id}>{category.name}</option>)}
                         </select>
                     </div>
                  </div>

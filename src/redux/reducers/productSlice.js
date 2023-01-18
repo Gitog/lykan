@@ -1,10 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit'
+import axios from 'axios'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+
+export const fetchCategories = createAsyncThunk(
+  'categories/fetchCategories',
+  async (thunkAPI) => {
+    const response = await axios.get('http://localhost:3000/categories')
+    return response.data
+  })
 
 export const initialState = {
   cart: [],
   allProducts: [],
-  products: []
+  products: [],
+  categories: [],
 }
+
 
 export const productSlice = createSlice({
   name: 'products',
@@ -28,13 +38,21 @@ export const productSlice = createSlice({
       const filteredProducts = state.allProducts.filter(item => (
         item.name.toLowerCase().includes(action.payload?.toLowerCase())))
         state.products = [...filteredProducts]
+    },
+    addToCategories: (state, action) => {
+      state.categories = [...action.payload]
     }
   },
+  extraReducers: (builder) => {
+    builder.addCase(fetchCategories.fulfilled, (state, action) => {
+      state.categories = [...action.payload]  
+    })
+  }
 })
 
 // Action creators are generated for each case reducer function
 export const { 
-  addToCart, removeFromCart, searchItem, addToProducts, addToAllProducts
+  addToCart, removeFromCart, searchItem, addToProducts, addToAllProducts, addToCategories
 } = productSlice.actions
 
 export default productSlice.reducer
