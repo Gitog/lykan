@@ -13,6 +13,7 @@ export const initialState = {
   allProducts: [],
   products: [],
   categories: [],
+  total: [],
 }
 
 
