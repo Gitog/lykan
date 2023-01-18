@@ -12,6 +12,15 @@ export default function Cart() {
     console.log(cart)
     const removeItemFromCart = (product) => dispatch(removeFromCart(product))
 
+    function handleProceedToCheckout(){
+        const user = JSON.parse(localStorage.getItem("user"))
+        if(!user){
+            navigate("/signin")
+        }else{
+            navigate("/checkoutpage")
+        }
+    }
+
     return (
 
         <div className="carthome">
@@ -25,7 +34,7 @@ export default function Cart() {
                       removeFromCart={removeItemFromCart}/>
                     ))}
                 </div>
-                <button  onClick={()=>{ navigate("/checkoutpage")}}>Proceed to checkout</button>
+                <button  onClick={handleProceedToCheckout}>Proceed to checkout</button>
             </div>
         </div>
     )

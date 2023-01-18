@@ -12,26 +12,36 @@ export default function Signin() {
   
   const [email, setEmail]=useState()
   const [password, setPassword]=useState()
+  const [errors, setErrors] = useState(null)
   const [isLoading, setIsLoading]=useState(false)
 
-  const User = {
-    email,
-    password
-  }
 
   // console.log(User)
   const dispatch = useDispatch()
 
   function handleSubmit(e){
      e.preventDefault()
-    //  setIsLoading(true)
-    //  fetch('http://localhost:4000',{
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type":"application/json"
-    //   },
-    //   body: JSON.stringify(User)
-    //  }).then(response =>response.json())
+     setIsLoading(true)
+     fetch('http://localhost:3000/signin',{
+      method: "POST",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify( {
+        email,
+        password
+      })
+     }).then(response => response.json())
+     .then(res => {
+        window.localStorage.setItem("user",JSON.stringify(res)) 
+        console.log(res, "data")
+        if(res.errors){setErrors(res.errors)}
+        setIsLoading(false)
+      
+        navigate(-1)
+    }).catch(error => {  setIsLoading(false)})
+    
+    
     // dispatch(signInUser({email, password}))
   }
 
@@ -39,9 +49,10 @@ export default function Signin() {
     <div className='sign'>
       <h1 className='page-header'><RiAccountCircleFill/>Login</h1>
         <form className='signinForm' onSubmit={handleSubmit}>
-            <input type='text' placeholder='Email' required onChange={e => setEmail(e.target.value)}/>
-            <input type='password' placeholder='Password' required onChange={e => setPassword(e.target.value)} disabled={isLoading}/>
+            <input type='text' placeholder='Email' required onChange={e => { setErrors(null); setEmail(e.target.value)}} />
+            <input type='password' placeholder='Password' required onChange={e => { setErrors(null); setPassword(e.target.value)}} disabled={isLoading}/>
             <button type='submit'>{isLoading ? "Loading...": "Sign In"}<BiLogInCircle /></button>
+            <span style={{color:"red"}}>{errors}</span>
         </form>
         <div className='links'>
           <p>No Account?</p>
