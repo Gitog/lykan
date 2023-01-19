@@ -35,8 +35,8 @@ function NewProduct() {
   return (
     <div className='maindiv'>
       <form className='newproduct' onSubmit={handleSubmit}>
-        <label for="myfile">Select Product Image:</label>
-        <input type="file" id="myfile" name="myfile" onChange={(e)=>setImage(e.target.value)}/>
+        <label for="myfile">Enter product Url:</label>
+        <input type="text" id="myfile" placeholder='url' onChange={(e)=>setImage(e.target.value)}/>
         <input type='text' placeholder='Product Name' autoComplete='on' required onChange={e => setName(e.target.value)}/>
         <textarea placeholder='Description' autoComplete='on' required onChange={e => setDescription(e.target.value)}/>
         <input type='number' placeholder='Price' autoComplete='on' required onChange={e => setPrice(e.target.value)}/>
@@ -51,10 +51,10 @@ function NewProduct() {
         </div>
         <label for='categories'>Choose Product Category</label>
         <select name='category' id='category' className='category'>
-          <option value='suits'>Suits</option>
-          <option value='Blazer'>Blazer</option>
-          <option value='socks'>Socks</option>
-          <option value='Shoes'>Shoes</option>
+          <option value='All'>All</option>
+          <option value='shoes'>Shoes</option>
+          <option value='clothes'>Clothes</option>
+          <option value='Accessories'>Accesories</option>
         </select>
         <input type='number' placeholder='Quantity' autoComplete='on' required onChange={e => setQuantity(e.target.value)}/>
         <button type="submit">Submit</button>
