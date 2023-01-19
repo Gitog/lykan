@@ -57,7 +57,7 @@ export const productSlice = createSlice({
   //     if (item.id === action.payload.id)
   //     item.quantity = item.quantity + 1
   //   }
-  //     return item;
+  //     return item;getAllClients(res.data
   //   }
   //   ));
   //   state.cart = [...newProducts];

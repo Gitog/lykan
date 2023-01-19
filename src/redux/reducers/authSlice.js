@@ -21,6 +21,19 @@ export const signUpUser = createAsyncThunk("user/signUpUser", async (body) => {
     return await res.json()
 })
 
+export const getAllClients = createAsyncThunk("user/clients", async (body) => {
+    console.log(body)
+
+    const res = await fetch("http://localhost:3000/users", {
+        method: "post",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body)
+    })
+    return await res.json()
+})
+
 export const signInUser = createAsyncThunk("auth/signInUser", async (body) => {
     console.log("body")
     const res = await fetch("http://localhost:3000/signin", {
