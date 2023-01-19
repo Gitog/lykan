@@ -45,6 +45,7 @@ export default function Products() {
         axios.get('http://localhost:3000/products').then((res) => {
             dispatch(addToProducts(res.data))
             dispatch(addToAllProducts(res.data))
+            console.log('res.data', res.data)
         }).catch(err => console.log(err))
         dispatch(fetchCategories())
     }, [])
