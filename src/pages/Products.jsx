@@ -5,6 +5,7 @@ import axios from 'axios'
 import '../css/products.css'
 
 import { useSelector, useDispatch } from 'react-redux'
+import HomeCard from "../components/homeCard";
 // import { decrement, increment } from './redux/reducers/counterSlice'
 
 
@@ -75,7 +76,7 @@ export default function Products() {
                  <div className="productsdiv">
 
                     {
-                    products.map((product) => <ProductsCard key={
+                    products.map((product) => <HomeCard key={
                             product.id
                         }
                         product={product}

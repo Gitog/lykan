@@ -1,8 +1,7 @@
 import React from 'react';
 import '../App.css'
-import { removeFromCart } from '../redux/reducers/productSlice';
 
-function CartCard({product, removeFromCart}) {
+function homeCard({product, addToCart}) {
     return (
         <div className='homecolumn' key={product.id}>
             <div className='homecard'>
@@ -11,15 +10,15 @@ function CartCard({product, removeFromCart}) {
                 </div>
                 <div className='content'>
                     <h2>{product.name}</h2>
-                    <p>{product.description}</p>
+                    <p>Kshs {product.description}</p>
                     <p>Kshs {product.price}</p>
                     <button type="button"
-                        onClick={() => removeFromCart(product)}>Remove from Cart</button>
+                        onClick={() => addToCart(product)}>Add to Cart</button>
                 </div>
             </div>
         </div>
     );
 }
 
-export default CartCard;
+export default homeCard;
 
