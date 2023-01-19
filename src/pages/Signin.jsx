@@ -27,6 +27,7 @@ export default function Signin() {
       headers: {
         "Content-Type":"application/json"
       },
+      credentials: "include",
       body: JSON.stringify( {
         email,
         password
@@ -38,7 +39,7 @@ export default function Signin() {
         if(res.errors){setErrors(res.errors)}
         setIsLoading(false)
       
-        navigate(-1)
+        res.role.name == 'admin'|| res.role.name =='agent'? navigate('/admin'): navigate(-1)
     }).catch(error => {  setIsLoading(false)})
     
     

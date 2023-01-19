@@ -30,7 +30,8 @@ export default function RootLayout() {
          setUser(null)
          axios({
             method: "DELETE",
-            url: "http://localhost:3000/signout"
+            url: "http://localhost:3000/signout",
+            withCredentials: true,
          })
     }
 
