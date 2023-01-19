@@ -16,26 +16,26 @@ function Signup() {
   const [password, setPassword]=useState()
   const [isLoading, setIsLoading]=useState(false)
 
-  // const User = {
-  //   name,
-  //   email,
-  //   address,
-  //   password
-  // }
+  const User = {
+    name,
+    email,
+    address,
+    password
+  }
 
  const dispatch = useDispatch()
 
   function handleSubmit(e){
      e.preventDefault()
-    //  setIsLoading(true)
-    //  fetch('http://localhost:3000',{
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type":"application/json"
-    //   },
-    //   body: JSON.stringify(User)
-    //  }).then(response =>response.json())
-    dispatch(signUpUser({name, email, address, password}))
+     setIsLoading(true)
+     fetch('http://localhost:3000/signup',{
+      method: "POST",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(User)
+     }).then(response =>response.json())
+    // dispatch(signUpUser({name, email, address, password}))
   }
 
   return (
