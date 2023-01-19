@@ -2,6 +2,8 @@ import {NavLink, Outlet, useLocation} from 'react-router-dom'
 import {BsFillCartPlusFill} from 'react-icons/bs'
 import {useSelector} from 'react-redux'
 import '../App.css'
+import axios from 'axios'
+import {useState, useEffect} from 'react'
 
 
 export default function RootLayout() {
@@ -10,6 +12,23 @@ export default function RootLayout() {
     // console.log(path.includes('admin'))
     const cart = useSelector(state => state.products.cart) ?? []
     // console.log(cart)
+    const [user, setUser] = useState(null)
+     useEffect(() => {
+        setUser(window.localStorage.getItem("user"))
+        console.log("test1",user)
+     }, [user]);
+
+     console.log(user)
+
+    const Logout = ()=>{
+         window.localStorage.clear()
+         setUser(null)
+         axios({
+            method: "DELETE",
+            url: "http://localhost:3000/signout"
+         })
+    }
+
     return (
         <div className='root-layout'>
             {
@@ -26,7 +45,7 @@ export default function RootLayout() {
                                 cart.length
                             }</span>
                         </NavLink>
-                        <NavLink to='signin'>My Account</NavLink>
+                       { !user? (<NavLink to='signin'>Login</NavLink>) : (<button type="button" onClick={Logout}>Logout</button>)}
                         <NavLink to="checkoutpage">Checkout</NavLink>
                     </div>
 
