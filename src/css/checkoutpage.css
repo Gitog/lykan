@@ -8,27 +8,20 @@
  } 
   
   
-  .checkout h1, h2{
+  .checkout h1 {
   font-size: 25px;
   font-family: 'Courier New', Courier, monospace;
   text-align:center;
   font-weight: lighter;
 }
-.checkout h2 {
-  text-align: left;
 
+
+.summary h2, p {
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align:center;
+  font-weight: lighter;
 }
-
-
-/* Style the checkout form */
-.details form {
-  max-width: 250px;
-  padding: 20px;
-  background-color: #e2e2e2;
-  border-radius: 10px;
-  text-align: center;
-
-} 
 
 .order {
   text-align: right;
@@ -79,7 +72,7 @@ Add some hover effects to the submit button
 } 
 
  Style the checkout summary section 
-.checkout-summary {
+.checkout summary {
   margin: 20px 0;
   padding: 20px;
   background-color: #e2e2e2;
