@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice, current } from '@reduxjs/toolkit'
 
 export const fetchCategories = createAsyncThunk(
   'categories/fetchCategories',
@@ -44,6 +44,21 @@ export const productSlice = createSlice({
       state.categories = [...action.payload]
     }
   },
+  // incrementCart: (state, action) => {
+  //   const newProducts = state.cart.map((item) => {
+  //     if (item.id === action.payload.id)
+  //     item.quantity = item.quantity + 1
+  //   }
+  //     return item;
+  //   }
+  //   ));
+  //   state.cart = [...newProducts];
+  //   const total = state.cart.reduce(
+  //     (currentTotal, item) => currentTotal + item.quantity * item.price);
+  //     state.total = total
+  //   ), 
+
+
   extraReducers: (builder) => {
     builder.addCase(fetchCategories.fulfilled, (state, action) => {
       state.categories = [...action.payload]  
