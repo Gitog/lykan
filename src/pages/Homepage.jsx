@@ -1,28 +1,29 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from 'react-router-dom';
 import Carousel from "../components/Carousel";
-import {addToCart} from "../redux/reducers/productSlice";
+import {addToCart, addToProducts, addToAllProducts} from "../redux/reducers/productSlice";
 import ProductsCard from "../components/productsCard";
-import {useState, useEffect} from 'react'
+import {useEffect} from 'react'
 import axios from 'axios'
 
 export default function Homepage() {
 
-    const [products, setProducts] = useState()
-    let randomProduct = Math.random() * products ?. length - 4
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const state = useSelector(state => state)
-    // const cart = useSelector(selectCart) ?? []
-    // console.log(state)
+
+    
+    const { products } = useSelector(state => state.products)
+    let randomProduct = Math.random() * products ?. length - 4
+
     const addItemToCard = (product) => dispatch(addToCart(product))
 
     useEffect(() => {
         axios({method: 'GET', url: 'http://localhost:3000/products'}).then((res) => {
-            setProducts(res.data)
+            dispatch(addToProducts(res.data))
+            dispatch(addToAllProducts(res.data))
         }).catch(err => console.log(err))
     }, [])
-    // console.log(products)
+    console.log(products )
 
     return (
 

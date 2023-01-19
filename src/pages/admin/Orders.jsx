@@ -1,6 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 function Orders() {
+  const {cart} = useSelector(state => state.products)
+  console.log('cart', cart)
+
   return (
     <div className='maindiv'>
     <table>
@@ -15,22 +19,24 @@ function Orders() {
      </tr>
      </thead>
      <tbody>
-     <tr>
-      <td><img src='https://cdn.pixabay.com/photo/2015/04/09/19/53/sock-715022_960_720.jpg' alt='socks'/></td>
-      <td>Socks</td>
-      <td>Carter's 6-Pack Crew Socks Navy/White/Grey Age-4 Years & Above-3H798510</td>
-      <td>Kshs 1200</td>
-      <td>100</td>
-      <td>
-      <select name='status' id='status' className='category'>
-          <option value='Recieved'>Recieved</option>
-          <option value='processing'>Processing</option>
-          <option value='complete'>Complete</option>
-        </select>
-      </td>
-     </tr>
-     </tbody>
-</table>
+      { cart.map((item) => 
+        <tr>
+         <td><img src={item.image} alt={item.name}/></td>
+         <td>{item.name}</td>
+         <td>{item.description}</td>
+         <td>{item.price}</td>
+         <td>{item.quantity}</td>
+         <td>
+         <select name='status' id='status' className='category'>
+             <option value='Recieved'>Recieved</option>
+             <option value='processing'>Processing</option>
+             <option value='complete'>Complete</option>
+           </select>
+         </td>
+        </tr>)
+    }
+      </tbody>
+    </table>
   </div>
   )
 }
