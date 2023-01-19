@@ -33,6 +33,7 @@ function Signup() {
       headers: {
         "Content-Type":"application/json"
       },
+      credentials: "include",
       body: JSON.stringify(User)
      }).then(response =>response.json())
     // dispatch(signUpUser({name, email, address, password}))

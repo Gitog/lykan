@@ -27,6 +27,7 @@ function NewProduct() {
       headers:{
         'Content-Type': 'application/json'
       },
+      credentials: "include",
       body: JSON.stringify(Product)
     }).then(response =>response.json())
   }
