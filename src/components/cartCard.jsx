@@ -11,7 +11,6 @@ function CartCard({product, removeFromCart}) {
                 </div>
                 <div className='content'>
                     <h2>{product.name}</h2>
-                    <p>{product.description}</p>
                     <p>Kshs {product.price}</p>
                     <button type="button"
                         onClick={() => removeFromCart(product)}>Remove from Cart</button>

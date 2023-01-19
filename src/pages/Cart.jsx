@@ -29,7 +29,7 @@ export default function Cart() {
 
         <div className="carthome">
             <div className='cartdiv'>
-                <h1>Your Basket</h1>
+                <h1>My Basket</h1>
                 <div className="carttrendy">
                    {cart.map((product) => (
                    <CartCard
@@ -38,7 +38,7 @@ export default function Cart() {
                       removeFromCart={removeItemFromCart} />
                     ))}
                 </div>
-                <button  onClick={handleProceedToCheckout}>Proceed to checkout</button>
+                <button type="button" onClick={handleProceedToCheckout}>Proceed to checkout</button>
             </div>
         </div>
     )
