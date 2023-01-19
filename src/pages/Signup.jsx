@@ -47,6 +47,7 @@ function Signup() {
         <input type='text' placeholder='Email' autoComplete='on' required onChange={e => setEmail(e.target.value)}/>
         <input type='text' placeholder='Address' autoComplete='on' required onChange={e => setAddress(e.target.value)}/>
         <input type='password' placeholder='Password' required onChange={e => setPassword(e.target.value)}/>
+        <input type='password' placeholder='Password' required onChange={e => setPassword(e.target.value)}/>
         <button type='submit'>{isLoading ? "Loading...": "Sign Up"} <BiLogInCircle /></button>
       </form>
       <div className='links'>

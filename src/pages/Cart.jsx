@@ -2,7 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import '../css/cart.css'
 import CartCard from "../components/cartCard";
 
-import { useNavigate,useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import {removeFromCart} from "../redux/reducers/productSlice";
 
