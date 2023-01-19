@@ -1,6 +1,16 @@
-import React from 'react'
+import {useEffect} from 'react'
+import { isAdmin } from '../../utils'
+import {useNavigate} from 'react-router-dom'
 
 export default function DisplayProducts() {
+  const navigate = useNavigate()
+
+  useEffect(()=>{
+     if(!isAdmin()){
+      navigate("/signin")
+     }
+  },[])
+
   return (
     <div className='maindiv'>
       <table>

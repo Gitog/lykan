@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css'
 
-function ProductsCard({product, addToCart}) {
+function homeCard({product, addToCart}) {
     return (
         <div className='homecolumn' key={product.id}>
             <div className='homecard'>
@@ -10,6 +10,7 @@ function ProductsCard({product, addToCart}) {
                 </div>
                 <div className='content'>
                     <h2>{product.name}</h2>
+                    <p>Kshs {product.description}</p>
                     <p>Kshs {product.price}</p>
                     <button type="button"
                         onClick={() => addToCart(product)}>Add to Cart</button>
@@ -19,5 +20,5 @@ function ProductsCard({product, addToCart}) {
     );
 }
 
-export default ProductsCard;
+export default homeCard;
 

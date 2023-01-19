@@ -3,6 +3,8 @@ import '../css/sign.css'
 import { useNavigate } from 'react-router-dom';
 import { BiLogInCircle } from 'react-icons/bi';
 import { RiUserAddFill } from 'react-icons/ri';
+import {useDispatch} from 'react-redux'
+import signUpUser from '../redux/reducers/authSlice'
 
 
 
@@ -21,21 +23,20 @@ function Signup() {
     password
   }
 
-
+ const dispatch = useDispatch()
 
   function handleSubmit(e){
      e.preventDefault()
      setIsLoading(true)
-     fetch('http://localhost:5000',{
+     fetch('http://localhost:3000/signup',{
       method: "POST",
       headers: {
         "Content-Type":"application/json"
       },
       body: JSON.stringify(User)
      }).then(response =>response.json())
+    // dispatch(signUpUser({name, email, address, password}))
   }
-
-  console.log(User)
 
   return (
     <div className="sign">

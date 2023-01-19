@@ -7,10 +7,11 @@ function CartCard({product, removeFromCart}) {
         <div className='homecolumn' key={product.id}>
             <div className='homecard'>
                 <div className='imageclass'>
-                    <img src={product.img_url} alt="Product image" />
+                    <img src={product.image} alt="Product image" />
                 </div>
                 <div className='content'>
                     <h2>{product.name}</h2>
+                    <p>{product.description}</p>
                     <p>Kshs {product.price}</p>
                     <button type="button"
                         onClick={() => removeFromCart(product)}>Remove from Cart</button>

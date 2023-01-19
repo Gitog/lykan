@@ -43,6 +43,14 @@ export const productSlice = createSlice({
     addToCategories: (state, action) => {
       state.categories = [...action.payload]
     }
+
+    // decrement: (state) => {
+    //   state.value -= 1
+    // },
+    // increment: (state, action) => {
+    //   state.value += action.payload
+    // },
+
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCategories.fulfilled, (state, action) => {

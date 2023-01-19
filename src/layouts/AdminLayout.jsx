@@ -16,6 +16,7 @@ function AdminLayout() {
         <NavLink to='newproduct'><VscNewFile/>New Product</NavLink>
         <NavLink to='orders'><AiOutlineUnorderedList />Orders</NavLink>
         <NavLink to='clients'><FiUsers />Clients</NavLink>
+        <NavLink to='signin'><FiUsers />Admin Account</NavLink>
         <NavLink to='/'><BiLogOutCircle />Logout</NavLink>
       </nav>
       </div>
