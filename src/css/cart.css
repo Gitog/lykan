@@ -11,10 +11,15 @@
 }
 
 .carttrendy{
+    width: 100%;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    margin: 0;
+    flex-direction: column;
+    margin:10px auto;
+}
+
+.carttrendy .homecolumn{
+  margin: 10px;
+
 }
 
 .carttrendy .homecard{
@@ -23,6 +28,10 @@
     gap: 50px;
     border-radius: 0;
     box-shadow: none;
+    margin: 0 auto;
+    margin-left: 230px;
+    outline: none;
+    
 }
 
 /* .carttrendy .imageclass{
@@ -38,4 +47,20 @@
 .carttrendy .content button{
     width:250px;
     height:30px;
+}
+
+.cartdiv button{
+    width:200px;
+    height: 40px;
+    margin-bottom: 5px;
+    margin-right: 20PX;
+    cursor: pointer;
+    background-color: blue;
+    color:#fff;
+    align-self: flex-end;
+}
+
+.cartdiv button:hover{
+    background-color: white;
+    color:blue;
 }
