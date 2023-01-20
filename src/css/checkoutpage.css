@@ -8,7 +8,7 @@
  } 
   
   
-  .checkout h1 {
+  .checkout h1, h3 {
   font-size: 25px;
   font-family: 'Courier New', Courier, monospace;
   text-align:center;
