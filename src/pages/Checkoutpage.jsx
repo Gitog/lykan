@@ -1,16 +1,37 @@
 import React, { useEffect } from 'react';
 import '../css/checkoutpage.css';
 import { useSelector, useDispatch } from "react-redux";
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 function CheckoutPage() { 
+
+  const navigate = useNavigate();
   const items = useSelector(state => state.products.cart);
   console.log(items)
 
   const dispatch = useDispatch();
 
   const handlePlaceOrder = () => {
-    alert("Order placed successfully!");
+    const products = items.map(item => item.id);
+    axios(
+      {
+        method: 'post',
+        url: 'http://localhost:3000/orders',
+        data: {
+          products: products,
+          status: 'pending'
+        },
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        withCredentials: true
+      })
+      .then(({data})=> {
+        navigate('/')
+      })
+      .catch(err => console.log(err));
   };
   const renderedItems = items.map(item => (
     <div key={item.id}>

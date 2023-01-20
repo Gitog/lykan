@@ -3,21 +3,22 @@ import React from "react";
 import { useEffect } from "react";
 
 function Clients() {
+	const [users, setUsers] = React.useState([]);
 
-  useEffect(()=>{
-    axios({
-      method: "get",
-      url: "http://localhost:3000/users",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      withCredentials: true,
-    })
-      .then(({ data }) => {
-        console.log(data);
-      })
-      .catch((err) => console.log(err));
-  }, [])
+	useEffect(() => {
+		axios({
+			method: "get",
+			url: "http://localhost:3000/users",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			withCredentials: true,
+		})
+			.then(({ data }) => {
+				setUsers(data);
+			})
+			.catch((err) => console.log(err));
+	}, []);
 
 	return (
 		<div className="clientdiv">
@@ -25,13 +26,13 @@ function Clients() {
 				<tr>
 					<th>Name</th>
 					<th>Email</th>
-					<th>Address</th>
 				</tr>
-				<tr>
-					<td>James Njorio</td>
-					<td>jamesnjorio@gmail.com</td>
-					<td>Kiambu</td>
-				</tr>
+				{users.map((user) => (
+					<tr key={user.email}>
+						<td>{user.name}</td>
+						<td>{user.email}</td>
+					</tr>
+				))}
 			</table>
 		</div>
 	);

@@ -17,18 +17,6 @@ function Orders() {
         "updated_at": "2023-01-19T08:35:57.967Z"
     },
     {
-        "id": 66,
-        "image": "https://loremflickr.com/480/640/nike air max 90",
-        "name": "Nike Air Max 90",
-        "description": "The Nike Air Max 90 is a classic shoe that has been around for decades. It features a Max Air unit in the heel for a comfortable ride. The upper is made of a combination of mesh and synthetic materials. The shoe is available in a variety of colors and is a great addition to any sneaker collection.",
-        "size": "6, 7, 8, 9, 10, 11, 12",
-        "quantity": 10,
-        "price": "100.0",
-        "category_id": 25,
-        "created_at": "2023-01-19T08:35:58.297Z",
-        "updated_at": "2023-01-19T08:35:58.297Z"
-    },
-    {
         "id": 67,
         "image": "https://loremflickr.com/480/640/nike air max 95",
         "name": "Nike Air Max 95",
@@ -63,18 +51,6 @@ function Orders() {
         "category_id": 25,
         "created_at": "2023-01-19T08:35:58.430Z",
         "updated_at": "2023-01-19T08:35:58.430Z"
-    },
-    {
-        "id": 70,
-        "image": "https://loremflickr.com/480/640/nike hoodie",
-        "name": "Nike Hoodie",
-        "description": "The Nike Hoodie is a classic hoodie that has been around for decades. The hoodie is made of cotton with a layer of smooth fleece on the inside to suit cold weather. The Hoodie is available in a variety of colors and is a great addition to any Hoodie collection.",
-        "size": "S, M, L, XL",
-        "quantity": 10,
-        "price": "100.0",
-        "category_id": 26,
-        "created_at": "2023-01-19T08:35:58.459Z",
-        "updated_at": "2023-01-19T08:35:58.459Z"
     },
     {
         "id": 71,
