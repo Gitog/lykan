@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../../css/admin/pages.css'
+
 
 function NewProduct() {
   const [image, setImage] = useState()
@@ -10,6 +12,7 @@ function NewProduct() {
   const [categories, setCategories] = useState()
   const [category, setCategory] = useState()
   const [quantity, setQuantity] = useState()
+  const [isLoading,setLoading] = useState()
 
   const Product={
     image,
@@ -17,11 +20,14 @@ function NewProduct() {
     description,
     price,
     size,
-    category,
+    category_id: parseInt(category),
     quantity
   }
 
+  const navigate = useNavigate()
+
   useEffect(() => {
+  
     fetch("http://localhost:3000/categories",{
       method: "GET",
       headers:{
@@ -33,8 +39,8 @@ function NewProduct() {
   }, [])
 
   function handleSubmit(e){
+    setLoading(true)
     e.preventDefault()
-
     fetch("http://localhost:3000/products",{
       method: "POST",
       headers:{
@@ -42,7 +48,7 @@ function NewProduct() {
       },
       credentials: 'include',
       body: JSON.stringify(Product)
-    }).then(response =>response.json())
+    }).then(response => {response.json(); setLoading(false); navigate('/admin/displayproducts')})
   }
   
   return (
@@ -68,7 +74,7 @@ function NewProduct() {
           <label for="large">Large</label>
         </div>
         
-        <button type="submit" style={{padding: '15px'}}>Submit</button>
+        <button type="submit" style={{padding: '15px'}}>{isLoading? 'Adding...': 'Submit'}</button>
       </form>
     </div>
   )
