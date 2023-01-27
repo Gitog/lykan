@@ -5,3 +5,10 @@ http://localhost:4000/
 
 #Admin page | for now....
 http://localhost:4000/admin
+
+##Link to Backend repo
+https://github.com/Gitog/lykan_api
+
+Online/ hosted site links
+https://lykan.vercel.app/
+https://lykanapi-production.up.railway.app/
